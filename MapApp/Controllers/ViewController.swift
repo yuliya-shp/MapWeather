@@ -63,8 +63,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
                 let point = MKPointAnnotation()
                 point.coordinate = coordinate
                 if let weather = weather {
-                    point.title = "temp: \(weather.main.temp) \nfeels like: \(weather.main.feels_like)"
-                    point.subtitle = "temp_max: \(weather.main.temp_max)\ntemp_min: \(weather.main.temp_min)"
+                    point.title = "Temperature: \(weather.main.temp) °C \nFeels like: \(weather.main.feels_like) °C"
+                    point.subtitle = "max: \(weather.main.temp_max) °C\nmin: \(weather.main.temp_min) °C"
                 } else {
                     point.title = "error"
                 }
@@ -77,8 +77,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        //UIApplication.shared.beginIgnoringInteractionEvents()
         
         //Hide search bar
         searchBar.resignFirstResponder()
@@ -93,7 +91,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
             
             if response == nil
             {
-                print("ERROR")
+                print("Eroor")
             }
             else
             {
