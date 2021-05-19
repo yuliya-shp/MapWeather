@@ -91,7 +91,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
             
             if response == nil
             {
-                print("Eroor")
+                print("Error")
             }
             else
             {
